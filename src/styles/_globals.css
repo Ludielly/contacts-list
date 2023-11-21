@@ -1,0 +1,13 @@
+@import url("./_reset.css");
+
+*, body {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    letter-spacing: .7px;
+}
+
+body {
+    background-color: #F2EAE9;
+    width: 100%;
+    height: 100vh;
+}

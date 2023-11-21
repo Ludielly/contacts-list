@@ -1,0 +1,60 @@
+.app {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app-header {
+    display: flex;
+    flex-direction: column;
+    width: 78%;
+    padding: 1rem 0;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.header-actions h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #776B5D;
+}
+
+.actions-box {
+    display: flex;
+}
+
+.app-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: #EEF5FF;
+    width: 80%;
+    height: 75vh;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 #B0A695;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 30px 10px;
+}
+
+.pagination {
+    display: flex;
+    margin: 5px auto;
+    align-items: center;
+}
+
+.pagination span {
+    color: #776B5D;
+    font-weight: 500;
+}
+
+.pagination span.disabled {
+    opacity: .5;
+}

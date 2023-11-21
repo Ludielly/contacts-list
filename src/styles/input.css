@@ -1,0 +1,29 @@
+.input {
+    position: relative;
+}
+
+.input svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.input input {
+    border-radius: .5rem;
+    border: none;
+    background-color: #EEF5FF;
+    padding: .75rem 1rem .75rem 2rem;
+    width: 100%;
+    box-shadow: 0 0 5px 1px #B0A695;
+    font-size: .95rem;
+}
+
+.input input::placeholder {
+    color: #a59e91;
+    font-weight: 500;
+}
+
+.input input:focus {
+    outline: 1px solid #776B5D;
+}

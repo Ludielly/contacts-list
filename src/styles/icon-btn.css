@@ -1,0 +1,25 @@
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: .25rem .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+.icon-btn svg {
+    display: block;
+}
+
+.icon-btn:disabled {
+    opacity: .5;
+}
+
+.icon-btn:hover:disabled {
+    cursor: default;
+}
