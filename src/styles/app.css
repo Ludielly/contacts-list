@@ -1,5 +1,5 @@
 .app {
-    max-width: 1280px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,7 +10,7 @@
 .app-header {
     display: flex;
     flex-direction: column;
-    width: 78%;
+    width: 1000px;
     padding: 1rem 0;
 }
 
@@ -35,13 +35,13 @@
     flex-direction: column;
     justify-content: start;
     background-color: #EEF5FF;
-    width: 80%;
-    height: 75vh;
+    width: 1024px;
+    height: 410px;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 #B0A695;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 30px 10px;
+    padding: 15px;
 }
 
 .pagination {
@@ -57,4 +57,36 @@
 
 .pagination span.disabled {
     opacity: .5;
+}
+
+@media (max-width: 1050px ) {
+    .app-header {
+        width: 700px;
+    }
+    
+    .app-body {
+        width: 724px;
+        height: 345px;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-header {
+        width: 400px;
+    }
+
+    .app-body {
+        width: 424px;
+    }
+}
+
+@media (max-width: 425px) {
+    .app-header {
+        width: 276px;
+    }
+
+    .app-body {
+        width: 300px;
+    }
 }

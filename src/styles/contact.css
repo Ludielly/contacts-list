@@ -1,7 +1,7 @@
 .contact {
     display: flex;
     align-items: center;
-    padding: .75rem .5rem;
+    padding: .65rem .5rem;
     border: 1px solid #776B5D;
     border-radius: 30px;
     gap: 1rem;
@@ -51,4 +51,19 @@
 .contact.selected span {
     color: #534d46;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        gap: .5rem;
+        min-width: unset;
+    }
+
+    .contact-data p {
+        font-size: .9rem;
+    }
+
+    .contact-data span {
+        font-size: .8rem;
+    }
 }

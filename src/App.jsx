@@ -4,6 +4,7 @@ import "./styles/app.css";
 import Contact from "./components/Contact";
 import IconBtn from "./components/IconBtn";
 import Input from "./components/Input";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -12,14 +13,18 @@ function App() {
   const [modalType, setModalType] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [search, setSearch] = useState("");
-  const contactsPerPage = 20;
+  
+  const mediumScreen = useMediaQuery({maxWidth: 1050})
+  const smallScreen = useMediaQuery({maxWidth: 764})
+  const extraSmallScreen = useMediaQuery({maxWidth: 425})
+  const contactsPerPage = extraSmallScreen ? 4 : smallScreen ? 8 : mediumScreen ? 12 : 20
+  
   const firstContact = (currentPage - 1) * contactsPerPage;
   const lastContact = firstContact + contactsPerPage;
   const alphabeticalOrder = [...contacts].sort((a, b) => a.name.localeCompare(b.name));
   const currentContacts = alphabeticalOrder.slice(firstContact, lastContact);
   const totalPages = Math.ceil(contacts.length / contactsPerPage);
-  const searchContacts = currentContacts.filter((contact) => contact.name.toLowerCase().includes(search.toLowerCase()))
-
+  const searchContacts = currentContacts.filter((contact) => contact.name.toLowerCase().includes(search.toLowerCase())) 
 
   const handlePrevPage = () => {
     setCurrentPage((prevPage) => prevPage - 1);
